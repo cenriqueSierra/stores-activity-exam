@@ -1,0 +1,32 @@
+
+<h3><a class="btn btn-secondary" href="/router"> Create New</a> STORES</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Store_Id</th>
+            <th>Store_Area</th>
+            <th>Items_Available</th>
+            <th>Daily_Customer_Count</th>
+            <th>valid</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.store_Id}}</td>
+            <td>{{this.store_Area}}</td>
+            <td>{{this.items_Available}}</td>
+            <td>{{this.daily_Customer_Count}}</td>
+            <td>{{this.store_Sales}}</td>
+
+            <td>
+                <a class="btn btn-primary btn-sm" href="/router/{{this.id}}">Edit</a>
+                <a class="btn btn-primary btn-sm" href="/router/delete/{{this.id}}"
+                onclick="return confirm('Are you sure you want to delete this record?');">Delete</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+

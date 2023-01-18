@@ -1,0 +1,29 @@
+<h3>{{viewTitle}}</h3>
+<form action='/router' method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{route._id}}">
+    <div class="form-group">
+        <label>store_Id</label>
+        <input type="text" class="form-control" name="ip" placeholder="ip" value="{{route.store_Id}}">
+    </div>
+    <div class="form-group">
+        <label>store_Area</label>
+        <input type="text" class="form-control" name="origin" placeholder="origin" value="{{route.store_Area}}">//de que router viene
+    </div>
+    <div class="form-group">
+        <label>items_Available</label>
+        <input type="text" class="form-control" name="metric" placeholder="metric" value="{{route.items_Available}}">
+    </div>
+    <div class="form-group">
+        <label>daily_Customer_Count</label>
+        <input type="text" class="form-control" name="localpref" placeholder="localpref" value="{{route.daily_Customer_Count}}">//se toma un enlace como principal
+    </div>
+    <div class="form-group">
+        <label>store_Sales</label>
+        <input type="text" class="form-control" name="valid" placeholder="valid" value="{{route.store_Sales}}">
+    
+    <div class="form-group">
+        <button type="submit" class="btn btn-info">Submit</button>
+        <a class="btn btn-secondary" href="/router/list">View</a>
+    </div>
+</form>
+
